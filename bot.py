@@ -29,8 +29,5 @@ def home():
     return "Bot ishlayapti"
 
 def run_web():
-    app.run(host="0.0.0.0", port=10000)
-
-threading.Thread(target=run_web).start()
-
-bot_loop()
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)

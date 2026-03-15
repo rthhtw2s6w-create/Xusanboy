@@ -1,6 +1,7 @@
+import os
 import requests
 
-BOT_TOKEN = "8506497703:AAHfZYwYmfYZsterD2wL1KMK4IsLAvXwKiM"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 BASE_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 def get_me():
